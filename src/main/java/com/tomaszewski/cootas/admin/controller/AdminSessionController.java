@@ -1,4 +1,4 @@
-package com.tomaszewski.coottas.admin.controller;
+package com.tomaszewski.cootas.admin.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

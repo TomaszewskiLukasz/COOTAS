@@ -1,10 +1,10 @@
-package com.tomaszewski.coottas;
+package com.tomaszewski.cootas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CoottasApplicationTests {
+class CootasApplicationTests {
 
 	@Test
 	void contextLoads() {
