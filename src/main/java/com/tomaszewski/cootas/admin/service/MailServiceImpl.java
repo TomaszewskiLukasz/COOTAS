@@ -1,7 +1,5 @@
 package com.tomaszewski.cootas.admin.service;
 
-import jakarta.validation.constraints.NotBlank;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -9,10 +7,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MailServiceImpl implements MailService {
-    private final MailSender mailSender;
+    private final static String SENDER = "noreply@cootas.io";
 
-    @Value("${email.sender}")
-    @NotBlank private String sender;
+    private final MailSender mailSender;
 
     public MailServiceImpl(MailSender mailSender) {
         this.mailSender = mailSender;
@@ -22,7 +19,7 @@ public class MailServiceImpl implements MailService {
     public void sendMail(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(to);
-        message.setFrom(sender);
+        message.setFrom(SENDER);
         message.setSubject(subject);
         message.setText(text);
 
