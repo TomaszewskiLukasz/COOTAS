@@ -1,18 +1,26 @@
 package com.tomaszewski.cootas.admin.controller;
 
+import com.tomaszewski.cootas.admin.service.AdminSessionService;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping(value = "/admin/upload-sessions")
+@RestController
+@RequestMapping(value = "/api/admin/sessions")
 public class AdminSessionController {
+    private final AdminSessionService adminSessionService;
 
-    @PostMapping()
-    public ResponseEntity<String> createSession() {
-        return ResponseEntity.ok("Session created successfully");
+    public AdminSessionController(AdminSessionService adminSessionService) {
+        this.adminSessionService = adminSessionService;
     }
 
+    @PostMapping()
+    public ResponseEntity<String> createSession(@Email @NotBlank @RequestParam String email) {
+        return ResponseEntity.ok(adminSessionService.createSession(email));
+    }
 
 }
