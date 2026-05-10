@@ -12,7 +12,7 @@ public class AdminSessionServiceImpl implements AdminSessionService {
 
     @Override
     public String createSession(String email) {
-        mailService.sendMail(email, "1");
+        mailService.sendMail(email, "Session Created", "Session has been created successfully.");
         return "Session created successfully";
     }
 }
