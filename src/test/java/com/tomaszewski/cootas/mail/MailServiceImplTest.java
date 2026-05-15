@@ -1,4 +1,4 @@
-package com.tomaszewski.cootas.admin.service;
+package com.tomaszewski.cootas.mail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,6 @@ import static org.mockito.Mockito.*;
 
 @DisplayName("MailServiceImpl Unit Tests")
 class MailServiceImplTest {
-
     private MailServiceImpl mailService;
 
     @Mock

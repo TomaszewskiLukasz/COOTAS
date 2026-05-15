@@ -1,4 +1,4 @@
-package com.tomaszewski.cootas.admin.service;
+package com.tomaszewski.cootas.mail;
 
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;

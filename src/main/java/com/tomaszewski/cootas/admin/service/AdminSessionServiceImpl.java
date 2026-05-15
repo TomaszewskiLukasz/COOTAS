@@ -1,5 +1,6 @@
 package com.tomaszewski.cootas.admin.service;
 
+import com.tomaszewski.cootas.mail.MailService;
 import org.springframework.stereotype.Service;
 
 @Service

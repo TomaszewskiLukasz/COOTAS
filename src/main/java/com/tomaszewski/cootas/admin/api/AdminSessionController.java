@@ -1,4 +1,4 @@
-package com.tomaszewski.cootas.admin.controller;
+package com.tomaszewski.cootas.admin.api;
 
 import com.tomaszewski.cootas.admin.service.AdminSessionService;
 import jakarta.validation.constraints.Email;
